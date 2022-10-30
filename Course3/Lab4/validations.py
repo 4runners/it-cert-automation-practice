@@ -2,7 +2,7 @@
 
 import re
 
-regexp = re.compile('._')
+
 
 def validate_user(username, minlen):
     """Checks if the received username matches the required conditions."""
@@ -19,8 +19,6 @@ def validate_user(username, minlen):
         return False
     # Usernames can't begin with a number
     if username[0].isnumeric():
-        return False
-    if regexp.search(username[0]):
         return False
     if re.search('[._]',username[0]):
         return False
